@@ -4866,30 +4866,41 @@ self.C3_ExpressionFuncs = [
 		() => 0.2,
 		() => 0,
 		() => "Sinyalisazyon",
-		() => "P1",
-		() => "p1 Oynuyor",
-		() => "Secili",
+		() => "Fonksiyonlar",
+		() => 600,
+		() => 370,
+		() => "oyun",
+		() => 298,
+		() => 252,
+		() => "",
+		() => 1765,
+		() => 381,
+		() => "gui",
+		() => 1325,
+		() => 140,
+		() => 970,
+		() => 907,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => (Math.floor(f0(10)) + 10);
 		},
+		() => "P1",
+		() => "P2",
+		() => "Makine",
+		() => "Secili",
+		() => "p1 Oynuyor",
 		() => "makine",
-		() => "Fonksiyonlar",
-		() => 600,
-		() => 370,
-		() => "",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(16, 17, 18, 19, 20);
 		},
-		() => "oyun",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
 		p => {
 			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() - 1);
+			return () => n0.ExpObject();
 		},
 		p => {
 			const n0 = p._GetNode(0);
@@ -4899,47 +4910,36 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => (f0() % 6);
 		},
-		() => "oyunBitti",
 		() => 3,
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpObject();
-		},
-		() => 150,
-		() => 160,
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpInstVar();
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			const n1 = p._GetNode(1);
-			return () => n0.ExpObject(n1.ExpObject());
-		},
-		() => 0.3,
-		() => 2,
-		() => "Makine",
-		() => "Makine Oynuyor",
-		() => "P2",
-		() => "p2 Oynuyor",
-		() => "1.Oyuncu Kazandı",
-		() => "secili",
-		() => "default",
-		() => "2.Oyuncu Kazandı",
-		() => "kirma",
-		() => "MAYMUNUN CEVİZ KIRMASI",
-		() => 15,
 		p => {
 			const n0 = p._GetNode(0);
 			const f1 = p._GetNode(1).GetBoundMethod();
 			const n2 = p._GetNode(2);
 			return () => n0.ExpObject(Math.floor(f1(n2.ExpObject())));
 		},
-		() => "gui",
+		p => {
+			const n0 = p._GetNode(0);
+			const n1 = p._GetNode(1);
+			return () => n0.ExpObject(n1.ExpObject());
+		},
 		() => 1.5,
-		() => 1325.572,
-		() => 140.838,
-		() => "MakineKirma",
+		() => 150,
+		() => 160,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpInstVar();
+		},
+		() => 0.3,
+		() => "1.Oyuncu Kazandı",
+		() => 2,
+		() => "Makine Oynuyor",
+		() => "p2 Oynuyor",
+		() => "secili",
+		() => "default",
+		() => "2.Oyuncu Kazandı",
+		() => "kirma",
+		() => "MAYMUNUN CEVİZ KIRMASI",
+		() => 15,
 		() => "Bilgisayar Kazandı",
 		() => "MakineSecme",
 		p => {
@@ -4950,7 +4950,6 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(1, 2, 3);
 		},
-		() => "esit_olmayan_sayi_uret",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject(0);
@@ -4964,8 +4963,8 @@ self.C3_ExpressionFuncs = [
 			return () => n0.ExpObject(2);
 		},
 		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => subtract(f0(0), 1);
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() - 1);
 		},
 		p => {
 			const n0 = p._GetNode(0);
